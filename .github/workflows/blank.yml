@@ -1,0 +1,13 @@
+function doGet(e) {
+  const page = e.parameter.page || 'signup';
+  switch (page) {
+    case 'login':
+      return HtmlService.createHtmlOutputFromFile('Login');
+    case 'dashboard':
+      return HtmlService.createHtmlOutputFromFile('Dashboard');
+    default:
+      return HtmlService.createHtmlOutputFromFile('Signup');
+  }
+}
+
+// Other server-side functions (signUp, verifyOTP, etc.)
