@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome, {{ user.first_name }}</h2>
+<p><a href="{{ url_for('profile') }}">Edit Profile</a></p>
+<p><a href="{{ url_for('set_video') }}">Set Video (Admin Only)</a></p>
+<p><a href="{{ url_for('watch_video', video_id=1) }}">Watch Video</a></p>
+{% endblock %}

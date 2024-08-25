@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Profile</h2>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.first_name.label }} {{ form.first_name(size=32) }}<br>
+    {{ form.last_name.label }} {{ form.last_name(size=32) }}<br>
+    {{ form.phone.label }} {{ form.phone(size=32) }}<br>
+    {{ form.profile_picture.label }} {{ form.profile_picture() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}

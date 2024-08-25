@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ video.title }}</h2>
+<iframe width="560" height="315" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
+<p id="watch-time">Watch Time: 0 seconds</p>
+<script src="{{ url_for('static', filename='js/watch_time.js') }}"></script>
+{% endblock %}
